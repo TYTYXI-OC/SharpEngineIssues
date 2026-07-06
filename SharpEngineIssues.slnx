@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SharpEngineDockCrash/SharpEngineDockCrash.csproj" />
+  <Project Path="SharpEngineTransparencyRepro/SharpEngineTransparencyRepro.csproj" />
+</Solution>

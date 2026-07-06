@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SharpEngineTransparencyRepro.MainWindow"
+        Title="SharpEngine Transparency Repro"
+        Width="1100"
+        Height="760"
+        MinWidth="900"
+        MinHeight="640">
+    <Grid RowDefinitions="Auto,*">
+        <Border Grid.Row="0" Padding="10">
+            <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                <Button Content="DepthRead" Click="UseDepthRead_OnClick" />
+                <Button Content="DepthReadWrite" Click="UseDepthReadWrite_OnClick" />
+                <CheckBox x:Name="TriangleSortingCheckBox"
+                          Content="TriSort"
+                          IsChecked="True"
+                          Click="TriangleSorting_OnClick"
+                          VerticalAlignment="Center" />
+                <CheckBox x:Name="ObjectSortingCheckBox"
+                          Content="ObjSort"
+                          IsChecked="False"
+                          Click="ObjectSorting_OnClick"
+                          VerticalAlignment="Center" />
+                <Button Content="Force sort" Click="ForceSort_OnClick" />
+                <TextBlock x:Name="StatusText"
+                           Foreground="#E6EDF3"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0" />
+            </StackPanel>
+        </Border>
+        <Border x:Name="SceneViewBorder" Grid.Row="1"/>
+    </Grid>
+</Window>

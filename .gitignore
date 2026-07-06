@@ -1,0 +1,72 @@
+## ---- .NET / Visual Studio build output ----
+**/bin/
+**/obj/
+[Dd]ebug/
+[Rr]elease/
+[Dd]ebugPublic/
+[Rr]eleasePublic/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]uild/
+[Bb]uildArtifacts/
+
+## ---- User-specific solution / project settings ----
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+*.vbproj.user
+*.vcxproj.user
+*.vcproj.user
+*.vbproj.user
+*.DotSettings
+*.DotSettings.user
+*.sln.docstates
+*.rsuser
+
+## ---- Visual Studio / Rider / VS Code working state ----
+.vs/
+.vscode/
+.idea/
+_ReSharper.Caches/
+*.sln.ide/
+
+## ---- NuGet ----
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+## ---- Avalonia / SharpEngine generated content (none expected, but defensive) ----
+*.avsuggest.bak
+
+## ---- Local tool & agent state (not shared) ----
+.codegraph/
+.omo/
+**/.serena/
+
+## ---- OS junk ----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.swp
+*~
+
+## ---- Logs & temporary files ----
+*.log
+*.tmp
+*.bak
+*.old
+
+## ---- Secret files (defensive — never commit licenses/keys) ----
+*.pfx
+*.p12
+*.snk
+.env
+.env.*
+secrets.json
+appsettings.*.Local.json
