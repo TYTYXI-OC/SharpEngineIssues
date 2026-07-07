@@ -1,3 +1,4 @@
+using Avalonia.Controls.Recycling;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Dock.Model.Core;
@@ -16,6 +17,8 @@ public partial class MainViewModel : ObservableObject
 
     [ObservableProperty]
     private bool _isFocusLayout = true;
+
+    public ControlRecycling ControlRecycling { get; } = new();
 
     public MainViewModel()
     {

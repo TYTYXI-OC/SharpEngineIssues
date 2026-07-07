@@ -12,5 +12,10 @@ internal class Program
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .WithInterFont()
+            .With(new Win32PlatformOptions
+            {
+                // If Use AngleEgl, it will not crash
+                RenderingMode = [Win32RenderingMode.Vulkan]
+            })
             .LogToTrace();
 }

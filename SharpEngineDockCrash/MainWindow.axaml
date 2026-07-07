@@ -7,6 +7,10 @@
         Width="1200" Height="800">
     <Window.Styles>
         <StyleInclude Source="avares://Dock.Avalonia.Themes.Fluent/DockFluentTheme.axaml" />
+        <Style Selector="DockControl">
+            <Setter Property="(ControlRecyclingDataTemplate.ControlRecycling)"
+                    Value="{Binding ControlRecycling}" />
+        </Style>
     </Window.Styles>
     <Grid RowDefinitions="Auto,*">
         <StackPanel Grid.Row="0"

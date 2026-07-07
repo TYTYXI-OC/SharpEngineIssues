@@ -22,7 +22,7 @@ public partial class ScenePanelViewModel : Tool
 
     private static SharpEngineSceneView CreateSceneView()
     {
-        var sceneView = new SharpEngineSceneView();
+        var sceneView = new SharpEngineSceneView(PresentationTypes.SharedTexture);
 
         sceneView.Initialize();
 
