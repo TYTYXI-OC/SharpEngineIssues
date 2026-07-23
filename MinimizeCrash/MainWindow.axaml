@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:MinimizeCrash"
+        x:Class="MinimizeCrash.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Title="MinimizeCrash - Dock Layout Crash Repro"
+        Width="1200" Height="800">
+    <Window.Styles>
+        <StyleInclude Source="avares://Dock.Avalonia.Themes.Fluent/DockFluentTheme.axaml" />
+        <Style Selector="DockControl">
+            <Setter Property="(ControlRecyclingDataTemplate.ControlRecycling)"
+                    Value="{Binding ControlRecycling}" />
+        </Style>
+    </Window.Styles>
+    <Grid RowDefinitions="Auto,*">
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    Margin="8" Spacing="8">
+            <Button Content="Toggle Layout (Focus ↔ Maximize)"
+                    Command="{Binding ToggleLayoutCommand}" />
+            <Button Content="Rapid Toggle (x10)"
+                    Command="{Binding RapidToggleCommand}" />
+            <TextBlock Text="{Binding IsFocusLayout, StringFormat='Current: {0} (Focus=True, Maximize=False)'}"
+                       VerticalAlignment="Center" Margin="12,0,0,0" />
+        </StackPanel>
+
+        <DockControl Grid.Row="1"
+                     Layout="{Binding Layout}" />
+    </Grid>
+</Window>
